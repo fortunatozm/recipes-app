@@ -5,6 +5,8 @@ import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 import MyProvider from './MyContext/MyProvider';
 import Profile from './pages/Profile';
+import TelaPrincipalComidas from './pages/TelaPrincipalComidas';
+import TelaPrincipalBebidas from './pages/TelaPrincipalBebidas';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={ Login } />
           <Route path="/profile" component={ Profile } />
+          <Route exact path="/foods" component={ TelaPrincipalComidas } />
+          <Route exat path="/drinks" component={ TelaPrincipalBebidas } />
           <Route path="*" component={ NotFound } />
         </Switch>
       </MyProvider>
