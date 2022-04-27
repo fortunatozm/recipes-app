@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import MyContext from '../MyContext/Context';
+import MenuInf from '../components/MenuInf';
 
 function Profile({ history }) {
   const { setCurLocation } = useContext(MyContext);
@@ -10,7 +11,10 @@ function Profile({ history }) {
   });
 
   return (
-    <div>Perfil</div>
+    <div>
+      <div>Perfil</div>
+      <MenuInf />
+    </div>
   );
 }
 

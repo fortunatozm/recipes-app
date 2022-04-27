@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import MyContext from '../MyContext/Context';
+import MenuInf from '../components/MenuInf';
 
 import '../css/tela-principal/telaPrincipalBebidas.css';
 
@@ -32,6 +33,7 @@ function TelaPrincipalBebidas() {
           )
         }
       </section>
+      <MenuInf />
     </>
   );
 }
