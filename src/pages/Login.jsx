@@ -17,6 +17,7 @@ function Login() {
 
   useEffect(() => {
     isFormValid();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loginData]);
 
   return (

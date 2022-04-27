@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import MyContext from '../MyContext/Context';
+import MenuInf from '../components/MenuInf';
 
 import '../css/tela-principal/telaPrincipalBebidas.css';
 
-const DRINKS_MAX_LEANGTH = 12;
+const DRINKS_MAX_LENGTH = 12;
 
 function TelaPrincipalBebidas() {
   const { drinks } = useContext(MyContext);
@@ -14,7 +15,7 @@ function TelaPrincipalBebidas() {
       <section className="drinks-container">
         {
           drinks.length && (
-            drinks.slice(0, DRINKS_MAX_LEANGTH)
+            drinks.slice(0, DRINKS_MAX_LENGTH)
               .map(({ strDrinkThumb, strDrink }, index) => (
                 <div
                   key={ strDrink }
@@ -32,6 +33,7 @@ function TelaPrincipalBebidas() {
           )
         }
       </section>
+      <MenuInf />
     </>
   );
 }
