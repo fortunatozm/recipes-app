@@ -16,7 +16,7 @@ function App() {
           <Route exact path="/" component={ Login } />
           <Route path="/profile" component={ Profile } />
           <Route exact path="/foods" component={ TelaPrincipalComidas } />
-          <Route exat path="/drinks" component={ TelaPrincipalBebidas } />
+          <Route exact path="/drinks" component={ TelaPrincipalBebidas } />
           <Route path="*" component={ NotFound } />
         </Switch>
       </MyProvider>
