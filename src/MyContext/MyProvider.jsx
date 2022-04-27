@@ -7,7 +7,16 @@ import fetchDrinks from '../services/fetchDrinks';
 function MyProvider({ children }) {
   const [meals, setMeals] = useState({});
   const [drinks, setDrinks] = useState({});
-
+  // header/search bar
+  const [searchBar, setSearchBar] = useState(false);
+  const [searchRadio, setSearchRadio] = useState('');
+  const [searchInput, setSearchInput] = useState('');
+  const [searchResult, setSearchResult] = useState([]);
+  // end header/search bar
+  // location
+  const [curLocation, setCurLocation] = useState({});
+  // end location
+  
   const getFoods = async () => {
     const apiResponse = await fetchFoods();
     setMeals(apiResponse.meals);
@@ -26,6 +35,16 @@ function MyProvider({ children }) {
   const ContextObject = {
     meals,
     drinks,
+    searchBar,
+    setSearchBar,
+    searchRadio,
+    setSearchRadio,
+    searchInput,
+    setSearchInput,
+    searchResult,
+    setSearchResult,
+    curLocation,
+    setCurLocation,
   };
 
   return (
@@ -36,7 +55,7 @@ function MyProvider({ children }) {
 }
 
 MyProvider.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element).isRequired,
+  children: PropTypes.arrayOf(PropTypes.elementType).isRequired,
 };
 
 export default MyProvider;
