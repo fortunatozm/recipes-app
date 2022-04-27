@@ -48,7 +48,6 @@ function Login() {
         data-testid="login-submit-btn"
         type="button"
         className="button-enter"
-        // onClick={ handleLogin }
         disabled={ !isFormValid() }
       >
         Enter
