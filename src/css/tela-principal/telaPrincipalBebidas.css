@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.drinks-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 360px;
+}
+
+.drink-card {
+  border-radius: 5px;
+  box-shadow: 1px 1px lightgray;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 5px;
+  width: 140px;
+}
+
+.drink-card img {
+  border-radius: 5px 5px 0 0;
+  width: auto;
+}
