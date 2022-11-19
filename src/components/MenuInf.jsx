@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import drinIcon from '../images/drinkIcon.svg';
 import exploreIcon from '../images/exploreIcon.svg';
 import mealIcon from '../images/mealIcon.svg';
+
 import '../css/footer.css';
 
 function MenuInf() {

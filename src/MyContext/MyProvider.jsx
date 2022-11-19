@@ -5,8 +5,8 @@ import fetchFoods from '../services/fetchFoods';
 import fetchDrinks from '../services/fetchDrinks';
 
 function MyProvider({ children }) {
-  const [meals, setMeals] = useState({});
-  const [drinks, setDrinks] = useState({});
+  const [meals, setMeals] = useState([]);
+  const [drinks, setDrinks] = useState([]);
   // header/search bar
   const [searchBar, setSearchBar] = useState(false);
   const [searchRadio, setSearchRadio] = useState('');
@@ -16,7 +16,7 @@ function MyProvider({ children }) {
   // location
   const [curLocation, setCurLocation] = useState({});
   // end location
-  
+
   const getFoods = async () => {
     const apiResponse = await fetchFoods();
     setMeals(apiResponse.meals);
@@ -55,7 +55,7 @@ function MyProvider({ children }) {
 }
 
 MyProvider.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.elementType).isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default MyProvider;
